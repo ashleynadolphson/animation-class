@@ -1,14 +1,17 @@
 *{
   margin: 0px;
   padding: 0px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body{
   display: flex;
   justify-content: center;
-  height: 100 vh;
+  height: 100vh;
+  width: 100%;
   align-items: center;
+  background-color: rgb(112, 101, 86);
 }
 .container{
   display: flex;
@@ -16,6 +19,13 @@ body{
 }
 .card{
   position: relative;
+  width: 320px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 50px;
+  box-shadow: 5px 5px 20px rgb(46, 35, 27);
+  transition: transform 0.5s ease-in-out;
 }
 
 .card img{
@@ -27,16 +37,54 @@ body{
   z-index: -2;
 }
 
+.intro{
+  width: 320px;
+  height: 65px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  color: white;
+  transition: .5s;
+}
+
+h3{
+  margin: 10px;
+  font-size: 25px;
+}
+
+p{
+  margin: 15px;
+  font-size: 15px;
+}
+
+.card h3, .card p{
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
 .card::before{
   position: absolute;
   inset: 0;
   height: 100%;
   width: 100%;
   z-index: -1;
-  background-color: 255, 183, 206, 0;
+  background-color:rgba(46, 35, 27, 0.5);
 }
 
 .card:hover{
-  background-color: aquamarine;
+  cursor: pointer;
+  transform: scale(1.05);
 }
+
+.card:hover .intro{
+  height: 120px;
+  background: rgb(46, 35, 27);
+
+}
+
+.card:hover h3, .card:hover p{
+  opacity: 1;
+  visibility: visible;
+}
+
 
