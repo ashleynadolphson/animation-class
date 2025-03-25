@@ -5,3 +5,35 @@
   grid-template-columns: repeat(3,1fr);
   place-items: center;
 }
+
+@keyframes up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50px); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes grow-and-rotate {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.5); }
+  50% { transform: rotate(30deg);}
+}
+
+.animated-icon-1 {
+  animation: up 2s infinite alternate;
+}
+
+.animated-icon-2 {
+  animation: spin 3s infinite linear;
+}
+
+.animated-icon-3 {
+  animation: grow-and-rotate 2s infinite alternate;
+}
+
+.animated-icon-2:hover {
+  animation-play-state: paused;
+}
