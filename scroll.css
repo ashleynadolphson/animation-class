@@ -4,7 +4,7 @@
   width: 5px;
   height: 100%;
   z-index: 1000;
-  background-color: blue;
+  background-color: rgb(161, 161, 250);
   scale: 1 0;
   transform-origin: top;
   animation: scroll-watcher linear;
